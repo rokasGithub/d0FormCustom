@@ -128,12 +128,12 @@ form {
 
 .form-control {
   position: relative;
-
+  border-color: red;
   /* margin-top: 50px; */
   /* padding: 50px 0px; */
   /* padding-bottom: 30px; */
   min-width: 100%;
-  border: 0;
+  border: none !important;
 }
 
 .form-control input {
