@@ -45,7 +45,6 @@ body {
 .navbar-nav {
   text-align: center;
   justify-content: center;
-  /* padding: 10px; */
 }
 
 .navbar-nav li a {
@@ -69,6 +68,7 @@ body {
   letter-spacing: normal;
   margin-top: 30px;
   margin-left: 40px;
+  padding-bottom: 20px;
 }
 
 .contact-text h1 {
@@ -89,7 +89,8 @@ body {
 
 .privacy-message {
   font-size: 14px;
-  padding: 20px 10px;
+  padding: 20px 3px;
+  margin-bottom: 0px !important;
 }
 
 .main-image-container {
@@ -99,36 +100,12 @@ body {
   /* margin-top: 10px; */
 }
 
-textarea:focus {
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-image-source: linear-gradient(
-    to right,
-    #0099cc,
-    #85baae 83%,
-    #cbe5c2 118%
-  );
-  border-image-slice: 1;
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff),
-    linear-gradient(to right, #0099cc, #85baae 83%, #cbe5c2 118%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-
-textarea::placeholder {
-  padding: 10px;
-  font-family: 'Avenir Book';
-}
-
 form {
   width: 400px;
-  height: 600px;
 }
 
 .form-control {
   position: relative;
-  border-color: red;
   /* margin-top: 50px; */
   /* padding: 50px 0px; */
   /* padding-bottom: 30px; */
@@ -184,6 +161,14 @@ form {
 
 input::-webkit-input-placeholder {
   opacity: 0;
+  font-family: 'Avenir Book';
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: 0px;
+  color: #000000;
   transition: inherit;
 }
 
@@ -197,8 +182,7 @@ input {
   touch-action: manipulation;
 }
 
-.form-control input:focus,
-.form-control input:valid {
+.form-control input:focus {
   outline: 0;
   border-bottom-width: 3px;
 }
@@ -219,8 +203,6 @@ form button {
   height: 40px;
   border-radius: 4px;
   outline: none;
-  padding: 0;
-  border: none;
   background: none;
   font-size: 13px;
   width: 100%;
@@ -228,6 +210,9 @@ form button {
   line-height: normal;
   letter-spacing: 0px;
   color: #ffffff;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  font-family: 'Avenir Heavy';
 }
 
 form button:focus {
@@ -239,7 +224,13 @@ form {
 }
 
 .enabled-background {
+  font-family: 'Avenir Heavy';
+  box-shadow: 0 2px 4px 0 #009acd;
   background-color: #009acd;
+}
+
+.enabled-background:focus {
+  transform: scale(98%);
 }
 
 .disabled-background {
@@ -267,7 +258,7 @@ form {
 /* Modal Content */
 .modal-content {
   border: 1px solid #888;
-  width: 60%;
+  width: 400px;
   margin: auto;
   height: 300px;
   padding: 30px 94px 41px;
@@ -325,6 +316,7 @@ form {
   line-height: normal;
   letter-spacing: -0.01px;
   color: #000000;
+  font-family: 'Avenir Black';
 }
 
 .modal-header,
@@ -333,27 +325,29 @@ form {
   border: 0;
   padding: 0;
 }
-
 .message-container {
   margin-top: 40px;
-  padding: 0px 5px;
-  /* border: 1px solid grey; */
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+  padding: 0px 8px;
 }
 
 .message-container textarea {
+  height: auto;
+  /* border: none !important; */
+  /* padding: 0px 50px; */
+  font-family: 'Avenir Book';
   width: 100%;
-  border: none;
   overflow: auto;
   outline: none;
-
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-
-  resize: none; /*remove the resize handle on the bottom right*/
   border-radius: 5px;
-  border: solid 1px #979797;
-  background-color: #ffffff;
+  /* border: solid 1px #979797; */
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  display: block;
 }
 
 .message-container label {
@@ -363,6 +357,40 @@ form {
   letter-spacing: 0px;
   padding-left: 7px;
   font-family: 'Avenir Book';
+  color: #383838;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 5px;
+  /* border: none !important;
+  border: 2px solid red !important; */
+  border-style: solid;
+  border-width: 1px !important;
+  border-image-source: linear-gradient(
+    to right,
+    #0099cc,
+    #85baae 83%,
+    #cbe5c2 118%
+  );
+  border-image-slice: 1;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff),
+    linear-gradient(to right, #0099cc, #85baae 83%, #cbe5c2 118%) !important;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+textarea::placeholder {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.09px;
+  color: #606060;
 }
 
 .error-message-color {

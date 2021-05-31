@@ -17,6 +17,12 @@ let userFeedback = {
   errorMessages: []
 };
 
+const pizza = document.querySelector('.contact-text');
+
+const height = pizza.offsetHeight;
+
+console.log(height)
+
 document.querySelectorAll('.input-form').forEach(item => {
   item.addEventListener('keyup', event => {
   
@@ -52,7 +58,7 @@ email.addEventListener('keyup', event => {
   const validEmail = ValidateEmail(fullEmail)
   
   validEmail ? emailError.innerHTML = "" : emailError.innerHTML = "Please enter a valid email"
-  validEmail ? emailLabel.style.color="black" : emailLabel.style.color="#9b0000"
+  // validEmail ? emailLabel.style.color="black" : emailLabel.style.color="#9b0000"
  
   if(fullEmail === ""){
     emailLabel.style.color="black";
