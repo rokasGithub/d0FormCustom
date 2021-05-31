@@ -134,7 +134,7 @@ form {
   /* padding-bottom: 30px; */
   min-width: 100%;
   border: none !important;
-  background-color: inherit;
+  background-color: #fbfbfb !important;
 }
 
 .form-control input {
