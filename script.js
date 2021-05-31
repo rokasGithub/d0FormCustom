@@ -17,23 +17,12 @@ let userFeedback = {
   errorMessages: []
 };
 
-const labels = document.querySelectorAll('.form-control label')
-
-labels.forEach(label => {
-    label.innerHTML = label.innerText
-        .split('')
-        .map((letter, idx) => `<span >${letter}</span>`)
-        .join('')
-})
-
-
-// Object.freeze(userFeedback);
-
 document.querySelectorAll('.input-form').forEach(item => {
   item.addEventListener('keyup', event => {
   
     const userData = validateUserInformation()
 
+    console.log("true value is" +userData.validInformation)
 
     if(userData.validInformation){
       forSubmissionButton.classList.remove('disabled-background')
@@ -53,7 +42,7 @@ document.querySelectorAll('.input-form').forEach(item => {
 forSubmissionButton.addEventListener('click', event => {
   event.preventDefault();
   const validateUserData = validateUserInformation()
-  // clearUserData()
+  clearUserData()
   modal.style.display = "block";
 });
 
@@ -104,6 +93,10 @@ function validateUserInformation(){
 
   const currentEmail = document.getElementById('email').value;
   userFeedback.errorMessages = []
+  console.log("email is : "+currentEmail)
+  console.log("firstName is : "+firstName)
+  console.log("lastName is : "+lastName)
+  console.log("message is : "+message)
   if(ValidateEmail(currentEmail) && firstName.value !== "" && lastName.value !== "" && message.value !== ""){
     userFeedback.validInformation = true;
     return userFeedback

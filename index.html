@@ -55,33 +55,26 @@
     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
       <form>
       <div class="form-control mb-5">
-        <input type="text" required id="firstname" placeholder="Type your last name">
+        <input autofocus class="input-form" type="text" required id="firstname" placeholder="Type your first name">
         <label for="fullname">First Name</label>
         <span class="error-message-color firstname-error-container"></span>
-        <!-- <label>
-          <span style="transition-delay: 0ms">E</span>
-            <span style="transition-delay: 50ms">m</span>
-            <span style="transition-delay: 100ms">a</span>
-            <span style="transition-delay: 150ms">i</span>
-            <span style="transition-delay: 200ms">l</span>
-      </label> -->
       </div>
 
       <div class="form-control mb-5">
-        <input required type="text" class="" name="lastname" id="lastname" placeholder="Type your second name">
+        <input class="input-form" required type="text" class="input-form" name="lastname" id="lastname" placeholder="Type your last name">
         <label for="email">Last Name</label>
         <span class="error-message-color lastname-error-container"></span>
       </div>
 
       <div class="form-control mb-5">
-        <input type="text" required id="email"/>
-        <label for="email" id="">Email</label>
+        <input type="text" required id="email" class="input-form" placeholder="Please enter a valid email"/>
+        <label for="email" id="emailLabel">Email</label>
         <span class="error-message-color email-error-container"></span>
       </div>
 
       <div class="message-container form-group ">
         <label for="comment" >Message</label>
-        <textarea class="" rows="5" cols="70"  id="message" placeholder="Type your message..."></textarea>
+        <textarea class="input-form" rows="5" cols="70"  id="message" placeholder="Type your message..."></textarea>
         <span class="error-message-color comment-error-container"></span>
       </div>
      
