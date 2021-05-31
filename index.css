@@ -1,0 +1,394 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('Avenir.ttc');
+
+  /* font-style: italic; */
+}
+
+/* @font-face {
+  font-family: 'avenir-heavy';
+  src: url('Avenir-Black.otf`') format('truetype');
+  font-weight: bold;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+body {
+  background-color: #fbfbfb;
+  height: 100vh;
+  font-family: Avenir;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.row img {
+  /* max-width: 100%; */
+  width: 350px;
+  padding-bottom: 20px;
+}
+
+.navbar-nav {
+  text-align: center;
+  justify-content: center;
+  /* padding: 10px; */
+}
+
+.navbar-nav li a {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: #fbfbfb;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  /* color: black; */
+  color: black;
+  background-color: white;
+}
+
+.main-container {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 20px;
+  /* margin-top: 10px; */
+}
+
+.contact-text {
+  line-height: normal;
+  letter-spacing: normal;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.contact-text h1 {
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: -0.01px;
+  color: #000000;
+  /* font-family: 'avenir-heavy'; */
+  font-family: 'Avenir Heavy';
+}
+
+.contact-text p {
+  font-size: 20px;
+  font-weight: normal;
+  color: #58595b;
+  font-family: 'Avenir Book';
+}
+
+.privacy-message {
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 10px; */
+}
+
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+
+label,
+input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-source: linear-gradient(
+    to right,
+    #0099cc,
+    #85baae 83%,
+    #cbe5c2 118%
+  );
+  border-image-slice: 1;
+  cursor: text;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0px;
+  color: #000000;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  height: 50px;
+  background-color: #fbfbfb;
+  font-family: 'Avenir Medium';
+}
+
+textarea:focus {
+  border-radius: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(
+    to right,
+    #0099cc,
+    #85baae 83%,
+    #cbe5c2 118%
+  );
+  border-image-slice: 1;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom-width: 3px;
+}
+
+input:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  overflow: hidden;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1);
+}
+
+input::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  color: #383838;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-family: 'Avenir Book';
+  padding-bottom: 5px;
+}
+
+.hyperlink-style {
+  color: #24a4ff;
+}
+
+form button {
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 13px;
+  width: 100%;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+
+form button:focus {
+  outline: 0;
+}
+
+form {
+  width: 400px;
+}
+
+.enabled-background {
+  background-color: #009acd;
+}
+
+.disabled-background {
+  background-color: #b5b5b5;
+}
+
+/*  Modal code */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  /* position: fixed;  */
+  /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  /* width: 100%;
+  height: 100%; */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  border: 1px solid #888;
+  width: 60%;
+  margin: auto;
+  height: 300px;
+  padding: 30px 94px 41px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.close-icon:hover,
+.close-icon:focus {
+  cursor: pointer;
+  font-weight: bold;
+  color: grey;
+}
+
+.close-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -30px;
+  right: -10px;
+}
+
+.close-first-line {
+  position: absolute;
+  height: 25px;
+  width: 1px;
+  margin-left: 12px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.close-second-line {
+  height: 25px;
+  width: 1px;
+  background-color: white;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
+.modal-footer a {
+  text-decoration: underline;
+}
+
+.modal-body p {
+  margin: 30px 0;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.01px;
+  color: #000000;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  border: 0;
+  padding: 0;
+}
+
+.message-container {
+  margin-top: 40px;
+}
+
+.message-container label {
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0px;
+  font-family: 'Avenir Book';
+  color: red;
+}
+
+.error-message-color {
+  color: #9b0000;
+  font-family: 'Avenir Book';
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  img {
+    max-width: 200px;
+  }
+
+  .main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    /* margin-top: 10px; */
+  }
+  .contact-text {
+    text-align: center;
+    margin-left: 0;
+  }
+  .contact-text p {
+    color: #000000;
+    font-size: 16px;
+  }
+
+  .contact-text span:nth-of-type(1) {
+    text-transform: lowercase;
+  }
+  .contact-text h1 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  form {
+    width: 280px;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .contact-text {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  form {
+    margin: auto;
+  }
+}
