@@ -91,7 +91,11 @@ body {
 
 .privacy-message {
   font-size: 14px;
-  padding: 20px 3px;
+  /* padding: 10px 3px; */
+  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
   margin-bottom: 0px !important;
 }
 
@@ -104,6 +108,13 @@ body {
 
 form {
   width: 400px;
+  /* max-height: 200px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-container {
+  min-height: 580px;
 }
 
 .form-control {
@@ -111,6 +122,7 @@ form {
   /* margin-top: 50px; */
   /* padding: 50px 0px; */
   /* padding-bottom: 30px; */
+
   min-width: 100%;
   border: none !important;
   background-color: #fbfbfb !important;
@@ -127,7 +139,6 @@ form {
   );
   border-image-slice: 1;
   cursor: text;
-  font-size: 20px;
   font-weight: 500;
   line-height: 1.35;
   letter-spacing: 0px;
@@ -139,6 +150,7 @@ form {
   width: 100%;
   background-color: #fbfbfb;
   font-family: 'Avenir Medium';
+  font-size: 20px;
 }
 
 .form-control label {
@@ -330,12 +342,14 @@ form {
   border: 0;
   padding: 0;
 }
+
 .message-container {
   margin-top: 40px;
   padding-bottom: 0px !important;
   margin-bottom: 0px !important;
   padding: 0px 8px;
-  height: 100%;
+  /* height: 100%; */
+  min-height: 190px;
 }
 
 .message-container textarea {
@@ -352,9 +366,10 @@ form {
   border-radius: 5px;
   margin-bottom: 0px !important;
   padding-bottom: 0px !important;
-
   text-align: left;
   padding-left: 6px;
+  /* font-family: 'Avenir Medium';
+  font-size: 20px; */
 }
 
 .message-container label {
@@ -372,7 +387,6 @@ textarea:focus {
   border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
-
   border-image-source: linear-gradient(
     to right,
     #0099cc,
