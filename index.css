@@ -218,7 +218,7 @@ form button {
 }
 
 form button:focus {
-  outline: 0;
+  outline: none;
 }
 
 form {
@@ -227,6 +227,12 @@ form {
 
 .enabled-background {
   background-color: #009acd;
+  outline: none !important;
+  border: 0;
+}
+
+.enabled-background:focus {
+  outline: none !important;
 }
 
 .disabled-background {
