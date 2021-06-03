@@ -17,11 +17,6 @@ let userFeedback = {
   errorMessages: []
 };
 
-const pizza = document.querySelector('.contact-text');
-
-const height = pizza.offsetHeight;
-
-console.log(height)
 
 document.querySelectorAll('.input-form').forEach(item => {
   item.addEventListener('keyup', event => {
@@ -99,10 +94,7 @@ function validateUserInformation(){
 
   const currentEmail = document.getElementById('email').value;
   userFeedback.errorMessages = []
-  console.log("email is : "+currentEmail)
-  console.log("firstName is : "+firstName)
-  console.log("lastName is : "+lastName)
-  console.log("message is : "+message)
+
   if(ValidateEmail(currentEmail) && firstName.value !== "" && lastName.value !== "" && message.value !== ""){
     userFeedback.validInformation = true;
     return userFeedback
