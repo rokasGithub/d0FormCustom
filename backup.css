@@ -419,7 +419,9 @@ textarea::placeholder {
 
 .privacy-container {
   margin-top: 95px;
+  border: 2px solid red;
   padding-bottom: 0 !important;
+  min-width: 250px;
 }
 
 .d-flex {
@@ -429,7 +431,6 @@ textarea::placeholder {
 
 footer {
   font-family: AvenirBook;
-  font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -449,7 +450,7 @@ h5 {
 
 .icon-section {
   font-family: 'Avenir Medium';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -471,7 +472,7 @@ h5 {
 
 .text-uppercase {
   font-family: AvenirHeavy;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
@@ -553,4 +554,8 @@ h5 {
   .privacy-statement-container {
     padding-top: 20px;
   }
+}
+
+.footer-section li:not(:first-child) {
+  font-size: 14px;
 }
