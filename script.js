@@ -10,7 +10,7 @@ const emailError = document.querySelector(".email-error-container");
 const firstNameError = document.querySelector(".firstname-error-container");
 const lastNameError = document.querySelector(".lastname-error-container");
 const commentError = document.querySelector(".comment-error-container");
-
+// currentEmail) && firstName.value !== "" && lastName.value !== "" && message
 
 let userFeedback = {
   validInformation: false,
@@ -20,10 +20,12 @@ let userFeedback = {
 
 document.querySelectorAll('.input-form').forEach(item => {
   item.addEventListener('keyup', event => {
-  
+    
+    userFeedback.errorMessages = []
     const userData = validateUserInformation()
 
     console.log("true value is" +userData.validInformation)
+    console.log("List of messages - " +userData.errorMessages)
 
     if(userData.validInformation){
       forSubmissionButton.classList.remove('disabled-background')
@@ -42,7 +44,7 @@ document.querySelectorAll('.input-form').forEach(item => {
 
 forSubmissionButton.addEventListener('click', event => {
   event.preventDefault();
-  const validateUserData = validateUserInformation()
+  // const validateUserData = validateUserInformation()
   clearUserData()
   modal.style.display = "block";
 });
@@ -94,6 +96,11 @@ function validateUserInformation(){
 
   const currentEmail = document.getElementById('email').value;
   userFeedback.errorMessages = []
+
+  console.log("firstname : "+ firstName);
+  console.log("lastName : "+ lastName);
+  console.log("message : "+ message);
+  console.log("currentEmail : "+ currentEmail);
 
   if(ValidateEmail(currentEmail) && firstName.value !== "" && lastName.value !== "" && message.value !== ""){
     userFeedback.validInformation = true;

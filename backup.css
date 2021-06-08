@@ -109,10 +109,6 @@ body {
   justify-content: center;
 }
 
-form {
-  width: 400px;
-}
-
 .form-control {
   position: relative;
   min-width: 100%;
@@ -222,11 +218,11 @@ form button {
   font-family: AvenirHeavy;
 }
 
-form button:focus {
+.contact-us-form button:focus {
   outline: none;
 }
 
-form {
+.contact-us-form {
   width: 400px;
 }
 
@@ -512,7 +508,7 @@ h5 {
 }
 
 @media only screen and (max-width: 400px) {
-  form {
+  .contact-us-form {
     width: 280px;
   }
 
@@ -545,7 +541,7 @@ h5 {
     padding-bottom: 25px;
   }
 
-  form {
+  .contact-us-form {
     margin: auto;
   }
 }

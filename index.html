@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="backup.css">
+  <link rel="stylesheet" href="yy.css">
   
 </head>
 <body>
@@ -38,7 +39,7 @@
   </div>
 </nav>
   
-<div class="container-fluid " >
+ <div class="container-fluid " >
 <div class="row contactus-container "> 
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 contact-text justify-content-center">
   <h1>Contact <span>Us</span></h1>
@@ -53,7 +54,7 @@
     </div>
 
     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 "> 
-      <form>
+      <form class="contact-us-form">
       <div class="form-control mb-5">
         <input autofocus class="input-form" type="text" required id="firstname" placeholder="Type your first name">
         <label for="fullname">First Name</label>
@@ -80,12 +81,12 @@
       
       <div >
       <p class="privacy-message">Digital On Six values your privacy and won't share your information with a third party. Check out our privacy policy <a href="" class="hyperlink-style">here</a>.</p>
-      <button disabled class=" disabled-background" id="formSubmissionButton" >Send</button>
+      <button disabled class="disabled-background" id="formSubmissionButton" >Send</button>
     </div>
     </form>  
     </div>
   </div>
-</div>
+</div> 
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -191,8 +192,6 @@
   </div>
    <!--End row-->
 </div>
-
-
 <!-- Section: Links -->
 </div>
 
@@ -218,8 +217,89 @@
 </footer>
 <!-- Footer -->
 
+<!-- Footer Form -->
+<div class="contact-footer-background ">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0 ">
+    <!-- Section: Form -->
+    <section class="">
+      <div class="row flex justify-content-center ">
+        <div class="col-auto text-white text-center footer-header-description ">
+        <!-- Submit button -->
+        <!-- <h2>Request a demo</h2> -->
+        <ul class="lightning-footer-text">
+          <li>R</li>
+          <li>e</li>
+          <li>q</li>
+          <li>u</li>
+          <li>e</li>
+          <li>s</li>
+          <li>t</li>
+          <li class="spacing-footer-header">a </li>
+          <li>d</li>
+          <li>e</li>
+          <li>m</li>
+          <li>o</li>
+          </ul>
+        <p>Learn more about segmenting your audience.</p>
+      </div>
+      </div>
+
+      <form action="" class="footer-contact-form">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <div class="form-outline mb-4 text-left">
+              <label class="form-label" for="form5Example2">First Name</label>
+              <input type="text" id="footer-form-footerFirstName" class="footer-input-style" />
+              <span class="error-message-color footer-form-error-firstname"></span>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto ">
+            <!-- Email input -->
+            <div class="form-outline mb-4 text-left">
+              <label class="form-label" for="form5Example2">Last Name</label>
+              <input type="text" id="footer-form-footerLastName" class="footer-input-style" />
+              <span class="error-message-color footer-form-error-lastname"></span>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <div class="form-outline mb-4 text-left">
+              <label class="form-label" for="form5Example2">Email </label>
+              <input type="email" id="footer-form-footerEmail" class="footer-input-style" />
+              <span class="error-message-color footer-form-error-email"></span>
+
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+        <div class="row flex justify-content-center text-center">
+          <div class="col-auto text-center">
+          <!-- Submit button -->
+          <button type="submit" disabled class="btn-submit-form  mb-4" id="footerSubmissionButton">
+            Get in touch
+          </button>
+        </div>
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+</div>
 
 
+<!-- End Footer Form -->
 <script src="script.js"></script>
+<script src="footer_contact.js"></script>
 </body>
 </html>
